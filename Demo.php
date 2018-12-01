@@ -1,15 +1,27 @@
 <?php
-include_once "./src/ascii.php";
-include_once "./src/encrypt.php";
+include_once "./src/SplArray.php";
+include_once "./src/map/SplArrayMap.php";
+include_once "./src/Encrypt.php";
+include_once "./src/map/EncryptMap.php";
+include_once "./src/SplString.php";
+include_once "./src/map/SplStringMap.php";
+include_once "./src/Common.php";
+include_once "./src/map/CommonMap.php";
+
+use sethink\functionLib\SplArray;
+use sethink\functionLib\Encrypt;
+use sethink\functionLib\SplString;
+use sethink\functionLib\Common;
 
 class Demo
 {
     public function index(){
-        $str1 = passport_encrypt('fen');
-        $str2 = passport_decrypt($str1);
-        var_dump($str1);
-        var_dump($str2);
+        $array = [
+            '1','2','3','4','5','2','4','6'
+        ];
 
+        $array = SplArray::multiple($array);
+        var_dump($array);
     }
 }
 

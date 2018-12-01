@@ -11,11 +11,6 @@
   "autoload": {
     "psr-4": {
       "sethink\\functionLib\\":"src"
-    },
-    "files": [
-      "src/common.php",
-      "src/ascii.php",
-      "src/encrypt.php"
-    ]
+    }
   }
 }
