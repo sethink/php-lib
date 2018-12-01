@@ -1,7 +1,9 @@
 <?php
+
 namespace sethink\functionLib\map;
 
-class SplStringMap{
+class SplStringMap
+{
     /**
      * @字符串转ascii
      *
@@ -10,7 +12,7 @@ class SplStringMap{
      */
     public function str2ascii($str)
     {
-        $str = mb_convert_encoding($str,'GBK','UTF-8');
+        $str          = mb_convert_encoding($str, 'GBK', 'UTF-8');
         $change_after = '';
         for ($i = 0; $i < strlen($str); $i++) {
             $temp_str     = dechex(ord($str[$i]));
@@ -26,13 +28,14 @@ class SplStringMap{
      * @param $ascii
      * @return string
      */
-    public function ascii2str($ascii){
-        $asc_arr= str_split(strtolower($ascii),2);
-        $str='';
-        for($i=0;$i<count($asc_arr);$i++){
-            $str.=chr(hexdec($asc_arr[$i][0].$asc_arr[$i][1]));
+    public function ascii2str($ascii)
+    {
+        $asc_arr = str_split(strtolower($ascii), 2);
+        $str     = '';
+        for ($i = 0; $i < count($asc_arr); $i++) {
+            $str .= chr(hexdec($asc_arr[$i][0] . $asc_arr[$i][1]));
         }
-        return mb_convert_encoding($str,'UTF-8','GBK');
+        return mb_convert_encoding($str, 'UTF-8', 'GBK');
     }
 
 }
