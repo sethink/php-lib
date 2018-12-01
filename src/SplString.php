@@ -9,6 +9,7 @@ use sethink\functionLib\map\SplStringMap;
  * @package sethink\functionLib\map\SplStringMap
  * @method SplStringMap str2ascii(string $str) static
  * @method SplStringMap ascii2str(string $ascii) static
+ * @method SplStringMap getExt(string $path) static
  */
 class SplString
 {
