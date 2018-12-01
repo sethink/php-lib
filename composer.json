@@ -1,0 +1,19 @@
+{
+  "name": "sethink/functionLib",
+  "description": "sethink",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "sethink",
+      "email": "358066237@qq.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "sethink\\functionLib\\":"src"
+    },
+    "files": [
+      "src/ascii.php"
+    ]
+  }
+}
