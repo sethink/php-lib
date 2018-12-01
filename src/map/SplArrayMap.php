@@ -5,7 +5,6 @@ namespace sethink\functionLib\map;
 class SplArrayMap
 {
 
-
     /**
      * 注：只能处理一维数组
      * @删除指定值
