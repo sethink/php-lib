@@ -1,7 +1,9 @@
 <?php
+
 namespace sethink\functionLib\map;
 
-class EncryptMap{
+class EncryptMap
+{
     /**
      * @加密
      *
