@@ -39,6 +39,12 @@ class SplStringMap
     }
 
 
+    /**
+     * @获取后缀
+     *
+     * @param $path
+     * @return bool|string
+     */
     public function getExt($path){
         return substr(strrchr($path, '.'), 1);
     }
