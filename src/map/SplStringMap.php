@@ -45,7 +45,8 @@ class SplStringMap
      * @param $path
      * @return bool|string
      */
-    public function getExt($path){
+    public function getExt($path)
+    {
         return substr(strrchr($path, '.'), 1);
     }
 
