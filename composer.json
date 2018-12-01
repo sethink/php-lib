@@ -13,7 +13,9 @@
       "sethink\\functionLib\\":"src"
     },
     "files": [
-      "src/ascii.php"
+      "src/common.php",
+      "src/ascii.php",
+      "src/encrypt.php"
     ]
   }
 }
