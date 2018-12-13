@@ -224,6 +224,11 @@ class ValidateMap
     }
 
 
+    public function IDCard($string){
+        return preg_match('/(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/', $string) !== 0 ? true : false;
+    }
+
+
     protected function filter($value, $rule)
     {
         if (is_string($rule) && strpos($rule, ',')) {

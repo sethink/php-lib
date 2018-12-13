@@ -25,6 +25,7 @@ use sethink\functionLib\map\ValidateMap;
  * @method ValidateMap email(string $string) static 是否为邮箱地址
  * @method ValidateMap boolean(string $string) static 是否为布尔值
  * @method ValidateMap isArray(string $string) static 是否为数组
+ * @method ValidateMap IDCard(string $string) static 验证身份证
  */
 class Validate
 {

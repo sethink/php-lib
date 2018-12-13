@@ -19,7 +19,7 @@ use sethink\functionLib\Validate;
 class Demo
 {
     public function index(){
-        var_dump(Validate::boolean('1'));
+        var_dump(Validate::email('1.cn.com'));
     }
 }
 
