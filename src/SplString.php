@@ -7,9 +7,8 @@ use sethink\functionLib\map\SplStringMap;
 /**
  * Class SplString
  * @package sethink\functionLib\map\SplStringMap
- * @method SplStringMap str2ascii(string $str) static 字符串转ascii
- * @method SplStringMap ascii2str(string $ascii) static ascii转字符串
- * @method SplStringMap getExt(string $path) static 获取后缀
+ * @method SplStringMap str2hex(string $str) static 字符串转hex
+ * @method SplStringMap hex2str(string $hex) static hex转字符串
  */
 class SplString
 {

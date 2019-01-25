@@ -5,12 +5,12 @@ namespace sethink\functionLib\map;
 class SplStringMap
 {
     /**
-     * @字符串转ascii
+     * @字符串转hex
      *
      * @param $str
      * @return string
      */
-    public function str2ascii($str)
+    public function str2hex($str)
     {
         $str          = mb_convert_encoding($str, 'GBK', 'UTF-8');
         $change_after = '';
@@ -23,31 +23,19 @@ class SplStringMap
 
 
     /**
-     * @ascii转字符串
+     * @hex转字符串
      *
-     * @param $ascii
+     * @param $hex
      * @return string
      */
-    public function ascii2str($ascii)
+    public function hex2str($hex)
     {
-        $asc_arr = str_split(strtolower($ascii), 2);
+        $hex_arr = str_split(strtolower($hex), 2);
         $str     = '';
-        for ($i = 0; $i < count($asc_arr); $i++) {
-            $str .= chr(hexdec($asc_arr[$i][0] . $asc_arr[$i][1]));
+        for ($i = 0; $i < count($hex_arr); $i++) {
+            $str .= chr(hexdec($hex_arr[$i][0] . $hex_arr[$i][1]));
         }
         return mb_convert_encoding($str, 'UTF-8', 'GBK');
-    }
-
-
-    /**
-     * @获取后缀
-     *
-     * @param $path
-     * @return bool|string
-     */
-    public function getExt($path)
-    {
-        return substr(strrchr($path, '.'), 1);
     }
 
 }
