@@ -2,11 +2,13 @@
 常用函数库
 
 # Common
+```
 ## Common::httpType()
 判断是http还是https
 
 ## Common::getClientIp()
 获取客户端ip地址
+```
 
 # Encrypt
 ## Encrypt::passport_encrypt($txt,$key)
