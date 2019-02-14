@@ -224,6 +224,12 @@ class ValidateMap
     }
 
 
+    /**
+     * @是否为身份证号码
+     *
+     * @param $string
+     * @return bool
+     */
     public function IDCard($string){
         return preg_match('/(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/', $string) !== 0 ? true : false;
     }
