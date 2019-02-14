@@ -12,13 +12,13 @@ class SplTimeMap
      */
     public function microtime($bool = false)
     {
-        list($usec, $sec) = explode(" ", microtime());
+        list($msec, $sec) = explode(" ", microtime());
         if($bool){
-            $usec = number_format($usec,6)*1000000;
+            $msec = number_format($msec,6)*1000000;
         }else{
-            $usec = number_format($usec,3)*1000;
+            $msec = number_format($msec,3)*1000;
         }
-        return $sec.$usec;
+        return $sec.$msec;
     }
 
 }
