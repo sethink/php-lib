@@ -9,6 +9,8 @@ include_once "./src/Common.php";
 include_once "./src/map/CommonMap.php";
 include_once "./src/Validate.php";
 include_once "./src/map/ValidateMap.php";
+include_once "./src/SplTime.php";
+include_once "./src/map/SplTimeMap.php";
 
 use sethink\functionLib\SplArray;
 use sethink\functionLib\Encrypt;
@@ -19,7 +21,8 @@ use sethink\functionLib\Validate;
 class Demo
 {
     public function index(){
-        var_dump(Validate::email('1.cn.com'));
+        var_dump(\sethink\functionLib\SplTime::microtime());
+        var_dump(\sethink\functionLib\SplTime::microtime(true));
     }
 }
 
