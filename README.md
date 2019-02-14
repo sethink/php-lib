@@ -11,14 +11,16 @@
 ```
 
 # Encrypt
+```
 ## Encrypt::passport_encrypt($txt,$key)
 加密字符串。$txt要加密字符，$key加密key
 
 ## Encrypt::passport_decrypt($txt,$key)
 解密字符串。$txt待解密字符，$key解密key
-
+```
 
 # SplArray
+```
 ## SplArray::deleteValue($delArray,$array)
 删除指定值。只能处理一维数组
 
@@ -30,9 +32,11 @@
 
 ## SplArray::multiple($array)
 获取重复值
+```
 
 
 # SplFile
+```
 ## SplFile::remote_file_exists($url)
 检测远程文件是否存在
 
@@ -46,9 +50,11 @@
 
 ## SplString::hex2str($hex)
 hex转字符串
+```
 
 
 # Validate
+```
 ## Validate::required($string)
 必填
 
@@ -105,3 +111,4 @@ hex转字符串
 
 ## Validate::IDCard($string)
 是否为身份证号码
+```
