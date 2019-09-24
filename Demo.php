@@ -1,28 +1,15 @@
 <?php
 include_once "./src/SplArray.php";
-include_once "./src/map/SplArrayMap.php";
 include_once "./src/Encrypt.php";
-include_once "./src/map/EncryptMap.php";
 include_once "./src/SplString.php";
-include_once "./src/map/SplStringMap.php";
 include_once "./src/Common.php";
-include_once "./src/map/CommonMap.php";
 include_once "./src/Validate.php";
-include_once "./src/map/ValidateMap.php";
 include_once "./src/SplTime.php";
-include_once "./src/map/SplTimeMap.php";
-
-use sethink\functionLib\SplArray;
-use sethink\functionLib\Encrypt;
-use sethink\functionLib\SplString;
-use sethink\functionLib\Common;
-use sethink\functionLib\Validate;
 
 class Demo
 {
     public function index(){
-        var_dump(\sethink\functionLib\SplTime::microtime());
-        var_dump(\sethink\functionLib\SplTime::microtime(true));
+        var_dump(\sethink\phpLib\SplTime::microtime());
     }
 }
 

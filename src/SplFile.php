@@ -1,22 +1,32 @@
 <?php
 
-namespace sethink\functionLib;
+namespace sethink\phpLib;
 
-use sethink\functionLib\map\SplFileMap;
-
-/**
- * Class SplFileMap
- * @package sethink\functionLib\map\SplFileMap
- * @method SplFileMap remote_file_exists(string $url) static 检测远程文件是否存在
- * @method SplFileMap getExt(string $path) static 检测远程文件是否存
- */
 class SplFile
 {
 
-    public static function __callStatic($method, $args)
+    /**
+     * @检测远程文件是否存在
+     * @param $url
+     * @return bool
+     */
+    public static function remote_file_exists($url)
     {
-        $class = '\\sethink\\functionLib\\map\\SplFileMap';
-        return call_user_func_array([new $class, $method], $args);
+        $curl = curl_init($url);
+        curl_setopt($curl, CURLOPT_NOBODY, true);
+        curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'GET');
+        $result = curl_exec($curl);
+
+        $found = false;
+        if ($result !== false) {
+            $statusCode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+            if ($statusCode == 200) {
+                $found = true;
+            }
+        }
+
+        curl_close($curl);
+        return $found;
     }
 
 }

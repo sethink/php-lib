@@ -1,21 +1,24 @@
 <?php
 
-namespace sethink\functionLib;
+namespace sethink\phpLib;
 
-use sethink\functionLib\map\SplTimeMap;
-
-/**
- * Class SplTime
- * @package sethink\functionLib\map\SplTimeMap
- * @method SplTimeMap microtime(bool $bool=true) static 获取毫秒或者微秒时间戳，默认为毫秒，如果$bool=true则为微秒
- */
 class SplTime
 {
-
-    public static function __callStatic($method, $args)
+    /**
+     * 获取毫秒或者微秒时间戳，默认为毫秒，如果$bool=true则为微秒
+     * @param bool $bool
+     * @return string
+     */
+    public static function microtime($bool = false)
     {
-        $class = '\\sethink\\functionLib\\map\\SplTimeMap';
-        return call_user_func_array([new $class, $method], $args);
+        list($msec, $sec) = explode(" ", microtime());
+        if ($bool) {
+            $msec = number_format($msec, 6) * 1000000;
+        } else {
+            $msec = number_format($msec, 3) * 1000;
+        }
+        return $sec . $msec;
     }
+
 
 }

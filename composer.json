@@ -1,5 +1,5 @@
 {
-  "name": "sethink/function-lib",
+  "name": "sethink/php-lib",
   "description": "sethink",
   "license": "Apache-2.0",
   "authors": [
@@ -10,7 +10,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "sethink\\functionLib\\":"src"
+      "sethink\\phpLib\\":"src"
     }
   }
 }
