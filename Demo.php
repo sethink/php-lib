@@ -9,7 +9,8 @@ include_once "./src/SplTime.php";
 class Demo
 {
     public function index(){
-        var_dump(\sethink\phpLib\SplTime::microtime());
+        $rs = \sethink\phpLib\SplString::lang_s2t('测试abc');
+        var_dump($rs);
     }
 }
 
